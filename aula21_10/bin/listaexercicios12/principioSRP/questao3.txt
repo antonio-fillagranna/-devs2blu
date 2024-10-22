@@ -1,0 +1,10 @@
+As quatro maiores vantagens do Principio S do SOLID (Single Responsability Principle) são:
+
+1 - Facilidade de manutenção:
+Alterar ou adicionar funcionalidades sem impactar outras áreas do código.
+2 - Reusabilidade:
+Classes menores podem ser reaproveitadas em outros projetos.
+3 - Facilidade de teste: 
+Testar uma classe com responsabilidade única é mais simples e direto.
+4 - Legibilidade:
+Código mais claro e fácil de entender.
