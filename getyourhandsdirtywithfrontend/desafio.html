@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+* {
+box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+}
+.header {
+  padding: 60px;
+  text-align: center;
+  background-color: #1abc9c;
+  color: rgb(81, 13, 240);
+  border-radius: 20%;
+}
+
+nav {
+    color: aliceblue;
+    display: flex;
+    text-align: center;
+    background-color: #333;
+    padding: 40px;
+    border-radius: 20%;
+}
+
+.section {
+  background-color: rgb(192, 10, 10);
+  padding: 14px 20px;
+  justify-self: left;
+  text-decoration: none;
+  text-align: center;
+  border: 5px;
+  border-radius: 20%;
+}
+
+.aside {
+  flex: 30%;
+  justify-self: right;
+  background-color: #bef342;
+  padding: 20px;
+  border-radius: 20%;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  border-radius: 20%;
+}
+    </style>
+    <header class="header">
+        Topo
+    </header>
+</head>
+<body>
+<nav>
+    Nav
+</nav>
+<div class="flex-container">
+    <div>
+        sec1
+        <div>
+            sec2
+        </div>
+    </div>
+    <div>
+        side
+    </div>
+</div>
+<section class="section">Section 1</section>
+<section class="section">Section 2</section>
+<aside class="aside">Aside bar</aside>
+<footer class="footer">Rodapé</footer>
+</body>
+</html>
