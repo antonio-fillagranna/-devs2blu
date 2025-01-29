@@ -1,0 +1,80 @@
+ódigo:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" lang="pt-br">
+    <title>Formulário teste</title>
+    <script type="text/javascript">
+        function enviar(){
+            var formulario = document.getElementById('formulario');
+
+            var nome2 = formulario.nome.value;
+            alert(nome2);
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Dados para cadastro</h1>
+
+    <form id="formulario">
+        <label for="nome">Nome:</label>
+        <input id="nom" type="nome" name="nome">
+
+        <label for="cpf">CPF:</label>
+        <input type="cpf" name="cpf">
+
+        <label for="cep">CEP</label>
+        <input type="cep" name="cep">
+
+        <button onclick="enviar()">Submit</button>
+    </form>
+
+    <h1 id="receber"></h1>
+
+</body>
+</html>
+function enviar(){
+    var formulario = document.getElementById('formulario');
+   
+    var nome2 = formulario.nome.value;
+    var paragrafo = document.createElement("p"); // crio o elemento <p>
+    var texto = document.createTextNode(nome2); // defino o texto
+    paragrafo.appendChild(texto); // insiro o texto no elemento <p>
+    document.body.appendChild(paragrafo); // insiro na página
+ }
+ <h1>Dados para cadastro</h1>
+ 
+  <form id="formulario">
+      <label for="nome">Nome:</label>
+      <input id="nom" type="nome" name="nome">
+ 
+      <label for="cpf">CPF:</label>
+      <input type="cpf" name="cpf">
+ 
+      <label for="cep">CEP</label>
+      <input type="cep" name="cep">
+ 
+      <button onclick="enviar()" type="button">Submit</button>
+  </form>
+ 
+  <h1 id="receber"></h1>
+
+  function show_image(src, width, height, alt) {
+    var img = document.createElement("img");
+    img.src = src;
+    img.width = width;
+    img.height = height;
+    img.alt = alt;
+
+    // This next line will just add it to the <body> tag
+    document.body.appendChild(img);
+}
+Then you could use it like this...
+
+<button onclick=
+    "show_image('http://google.com/images/logo.gif', 
+                 276, 
+                 110, 
+                 'Google Logo');">Add Google Logo</button>

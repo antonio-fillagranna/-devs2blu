@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <input type="text" id="nome"/>
+    <input type="text" id="email"/>
+    <input type="text" id="fone"/>
+    <button onclick="alert('Olá')">Clique aqui</button>
+
+    <script>
+        var inputs = document.getElementsByTagName('inputs')
+        console.log(inputs)
+        inputs[1].value = 'Ola mundo'
+
+        var inputNome = document.getElementById(nome)
+        console.log(inputNome)
+        inputNome = "jose"
+        inputNome.setAttribute('class', 'red')
+    </script>
+</body>
+</html>

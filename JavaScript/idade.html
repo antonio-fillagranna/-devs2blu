@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div>
+        <label>Informe idade</label>
+        <input type="text" placeholder="Informe idade">
+        <button onclick="calcular()">Calcular</button>
+        <!--
+        <button onclick="enviar()">enviar</button>
+        -->
+        <div id="resultado"></div>
+    
+    </div>
+    <script>
+        function calcular(){
+            var input = document.getElementsByTagName("input")[0]
+            
+
+            if (input.value == ''){
+                alert('Informe idade')
+                input.focus()
+                return
+            }
+            var divResultado = document.getElementById("resultado")
+            var pResultado = document.createElement('p')
+            if(input.value < 18){
+                divResultado.setAttribute('class', 'red')
+                pResultado.innerHTML = 'Menor de idade'
+                //divResultado.setAttribute('innerHTML', 'Menor de idade')
+            }else{
+                divResultado.setAttribute('class', 'green')
+                pResultado.innerHTML = 'Maior de idade'
+                //divResultado.setAttribute('innerHTML', 'Maior de idade')
+            }
+            divResultado.appendChild(pResultado)
+        }
+        /*
+        function enviar(){
+            var formulario = document.getElementById('formulario');
+  
+            var nome2 = formulario.nome.value;
+            var paragrafo = document.createElement("p"); // crio o elemento <p>
+            var texto = document.createTextNode(nome2); // defino o texto
+            paragrafo.appendChild(texto); // insiro o texto no elemento <p>
+            document.body.appendChild(paragrafo); // insiro na página
+        }
+        */
+       
+    </script>
+</body>
+</html>
