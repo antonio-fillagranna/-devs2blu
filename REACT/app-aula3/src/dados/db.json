@@ -1,0 +1,70 @@
+{
+  "contatos": [
+    {
+      "id": "1",
+      "nome": "Ana",
+      "email": "ana@gmail.com",
+      "telefone": "(47)7070-7070"
+    },
+    {
+      "id": "2",
+      "nome": "Maria",
+      "email": "maria@gmail.com",
+      "telefone": "(47)7050-7060"
+    },
+    {
+      "id": "6622",
+      "nome": "Pedro",
+      "email": "pedro@gmail.com",
+      "telefone": "(47)7080-0987"
+    },
+    {
+      "id": "c39b",
+      "nome": "Pedro",
+      "email": "pedro@gmail.com",
+      "telefone": "(47)7080-0987"
+    },
+    {
+      "id": "c5c1",
+      "nome": "Pedro",
+      "email": "pedro@gmail.com",
+      "telefone": "(47)7080-0987"
+    },
+    {
+      "id": "4dd9",
+      "nome": "Pedro",
+      "email": "pedro@gmail.com",
+      "telefone": "(47)7080-0987"
+    },
+    {
+      "id": "ccc0",
+      "nome": "Pedro",
+      "email": "pedro@gmail.com",
+      "telefone": "(47)7080-0987"
+    },
+    {
+      "id": "e6bb",
+      "nome": "Pedro",
+      "email": "pedro@gmail.com",
+      "telefone": "(47)7080-0987"
+    },
+    {
+      "id": "6b0e",
+      "nome": "Antonio",
+      "email": "antonio@gmail.com",
+      "telefone": "(47)7080-0987"
+    },
+    {
+      "id": "fcbb",
+      "nome": "scdqwd",
+      "email": "dswq",
+      "telefone": "ss"
+    },
+    {
+      "id": "9476",
+      "nome": "Java avançado e POO",
+      "email": "brunamoro68@gmail.com",
+      "telefone": "(47)997069182"
+    }
+  ]
+}
