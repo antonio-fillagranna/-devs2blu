@@ -1,0 +1,17 @@
+<p>Aprendendo sobre Diretivas</p>
+
+<p *ngIf="mostrar">Diretivas no Angular</p>
+
+<button class="btn btn-primary" (click)="trocar()">Trocar</button>
+
+
+<button class="btn btn-danger" (click)="trocar()">Cesta de fruta</button>
+<div *ngIf="mostrar">
+    <ul class="table table-striped">
+        <li class="list-group-item" *ngFor="let fruta of frutas">
+            {{ fruta }}
+        </li>
+    </ul>
+</div>
+<input type="text" [(ngModel)]="novaFruta">
+<button class="btn btn-outline-success" (click)="adicionarLista()">Adicionar fruta</button>
