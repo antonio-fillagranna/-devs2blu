@@ -1,0 +1,19 @@
+<h1 class="text-center">Trabalhando com formulário template driven</h1>
+
+<form #f="ngForm" (ngSubmit)="dados(f)">
+    <Label>Informe nome</Label>
+    <input type="text" [(ngModel)]="usuario.nome" 
+     name="nome" 
+     (blur)="validarNome()" 
+     class=""  
+    />
+    <div *ngIf="nomeInValido" style="color: red;">O nome é obrigatório</div>
+
+    <Label>Informe email</Label>
+    <input type="email" [(ngModel)]="usuario.email" name="email" />
+
+    <Label>Informe fone</Label>
+    <input type="tel" [(ngModel)]="usuario.fone" name="fone" />
+   
+    <input type="submit" value="enviar" />
+</form>
