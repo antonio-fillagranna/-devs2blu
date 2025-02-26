@@ -1,0 +1,34 @@
+
+<div class="container">
+  <h1>CRUD de contatos</h1>
+
+  <!-- Formulário -->
+  <form (submit)="salvar()">
+    <input type="text" [(ngModel)]="contato.nome" name="nome" placeholder="Nome" required>
+    <input type="email" [(ngModel)]="contato.email" name="email" placeholder="Email" required>
+    <input type="tel" [(ngModel)]="contato.fone" name="fone" placeholder="Ex:(47)9090-8956" required>
+    <button type="submit">{{ editando ? 'Atualizar' : 'Adicionar' }}</button>
+    <button type="button" *ngIf="editando" (click)="cancelarEdicao()">Cancelar</button>
+  </form>  
+</div>
+<p>{{erro}}</p>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Fone</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contato of contatos">
+      <td>{{contato.nome}}</td>
+      <td>{{contato.email}}</td>
+      <td>{{contato.fone}}</td>
+      <td><button class="edit" (click)="editar(contato)">Editar</button>
+        <button class="delete" (click)="excluir(contato.id)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
