@@ -1,0 +1,12 @@
+<p>Paginação com pequeno volume de dados</p>
+<ol>
+    <li *ngFor="let item of paginatedItems">{{item}}</li>
+</ol>
+
+<button (click)="changePage(currentPage - 1)"
+[disabled]="currentPage === 1"> << </button>
+
+<span>Página {{ currentPage }}</span>
+
+<button (click)="changePage(currentPage + 1)"
+[disabled]="currentPage >= items.length/pageSize"> >></button>

@@ -1,0 +1,12 @@
+<p>Páginação de grande volume de dados</p>
+
+<ol>
+    <li *ngFor="let item of items | paginate:{itemsPerPage:10, currentPage: page } ">{{item}}</li>
+</ol>
+
+<div style="display:flex; justify-content: center;">
+    <pagination-controls 
+    (pageChange)="page = $event">
+    </pagination-controls>
+</div>
+
