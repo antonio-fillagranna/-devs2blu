@@ -1,0 +1,34 @@
+<h1>Aula de pipes</h1>
+<p> {{ mensagem }}</p>
+<p> {{ mensagem | uppercase }}</p>
+<p> {{ mensagem | lowercase }}</p>
+<p> {{ mensagem | titlecase }}</p>
+
+<hr />
+<p>{{ aniversario }}</p>
+<p>{{ aniversario | date }}</p>
+<p>{{ aniversario | date:'dd/MM/YYYY' }}</p>
+<p>{{ aniversario | date:'dd/MM/YY' }}</p>
+<p>{{ aniversario | date:'YYYY/MM/dd' }}</p>
+<p>{{ aniversario | date:'fullDate' }}</p>
+<p>{{ aniversario | date:'shortTime' }}</p>
+
+<hr />
+<p>{{ valorPastel | currency }}</p>
+<p>{{ valorPastel | currency:'BRL'}}</p>
+<p>{{ valorPastel | currency:'BRL':'symbol':'1.3-3' }}</p>
+
+<hr />
+<p>{{ mensagem | slice:3:11 }}</p>
+
+<hr />
+<ul>
+  <li *ngFor="let p of pessoas | slice:0:1">{{ p }}</li>
+</ul>
+
+<hr />
+<h1>Meu pipe personalizado</h1>
+<input type="text" placeholder="Informe um filtro" [(ngModel)]="termoPesquisa"/>
+<ul>
+  <li *ngFor="let usuario of usuarios | filtroUsuarios: termoPesquisa">{{ usuario.nome }}</li>
+</ul>
