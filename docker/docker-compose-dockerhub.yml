@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: antonio.fillagranna/dbpg:latest
+    container_name: db_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: usr_agenda
+      POSTGRES_PASSWORD: D@ck&r@2025
+      POSTGRES_DB: db_agenda
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+
+  backend:
+    image: antonio.fillagranna/backend:latest
+    container_name: express_backend
+    restart: always
+    environment:
+      DB_HOST: postgres
+      DB_USER: usr_agenda
+      DB_PASSWORD: D@ck&r@2025
+      DB_NAME: db_agenda
+      DB_PORT: 5432
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+
+  frontend:
+    image: antonio.fillagranna/frontend:latest
+    container_name: angular_frontend
+    restart: always
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
